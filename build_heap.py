@@ -30,11 +30,11 @@ def main():
         n = int(input())
         data = list(map(int, input().split()))
     else:
-        file_name = input().strip()
+        file_name = input()
         try: 
             with open('./tests/' + file_name, 'r') as file:
                 n = int(file.readline())
-                data = list(map(int, input().split()))
+                data = list(map(int, file.readline().split()))
         except Exception as ex:
             print("File not found", str(ex))
             return
