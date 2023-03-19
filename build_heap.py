@@ -32,7 +32,7 @@ def main():
     else:
         file_name = input().strip()
         try: 
-            with open('test/' + file_name, 'r') as file:
+            with open('tests/' + file_name, 'r') as file:
                 n = int(file.readline())
                 data = list(map(int, input().split()))
         except Exception as ex:
